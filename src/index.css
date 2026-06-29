@@ -1,4 +1,4 @@
-
+/*  ToDoList.tsx styling */
 .main-container{
     display: flex;
     flex-direction: column;
@@ -9,11 +9,13 @@
     
 }
 
+
+/* TaskCards.tsx styling */
 ol{
     list-style: none;
 }
 
-.list-container li{
+.card-style {
     border: 3px solid;
     border-radius: 10px;
     padding: 25px 5px;
@@ -21,4 +23,5 @@ ol{
     margin-bottom: 25px;
     text-align: center;
     font-weight: bold;
+    background-color: aquamarine;
 }

@@ -38,7 +38,9 @@ const ToDoList = () => {
                 <input type="text" value={newTask} onChange={handleInputChange} placeholder="Enter a task..."/>
                 <button onClick={handleAddTask}>Add Task</button>
             </div>
-            <TaskCards tasks={tasks} handleDeleteTask={handleDeleteTask} />
+
+            
+            <TaskCards className="card-style" tasks={tasks} handleDeleteTask={handleDeleteTask} />
             
         </div>
     );
