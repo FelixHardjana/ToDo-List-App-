@@ -1,8 +1,10 @@
 
+import ToDoList from "./ToDoList";
 
 const App = () => {
   return(
     <>
+    <ToDoList />
     </>
   );
 }
