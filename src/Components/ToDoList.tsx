@@ -1,16 +1,17 @@
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
+import TaskCards from "./TaskCards.tsx";
 
 const ToDoList = () => {
 
-    const [tasks, setTasks] = useState<string[]>(["take a bath", "water"]);
+    const [tasks, setTasks] = useState<string[]>([]);
     const [newTask, setNewTask] = useState<string>("");
 
 
-    useEffect(() => {
+    //This is to show a similar notification of how many tasks are left on the tab
+    useEffect(() => { 
         document.title = `Tasks: (${tasks.length})`;
     }, [tasks]);
-
 
 
 
@@ -32,25 +33,12 @@ const ToDoList = () => {
 
     return(
         <div className="main-container">
+
             <div className="task-bar">
-                <input type="text" value={newTask} onChange={handleInputChange}/>
+                <input type="text" value={newTask} onChange={handleInputChange} placeholder="Enter a task..."/>
                 <button onClick={handleAddTask}>Add Task</button>
             </div>
-
-
-            <div>
-                <ol className="list-container">
-                    {tasks.map((task, index) => (
-                        <li key={`${task}, ${index}`}>
-                            {task}
-                            <button>Task Completed</button>
-                            <button onClick={() => handleDeleteTask(index)}>X</button>
-                        </li>
-                    ))}
-                </ol>
-
-
-            </div>
+            <TaskCards tasks={tasks} handleDeleteTask={handleDeleteTask} />
             
         </div>
     );
