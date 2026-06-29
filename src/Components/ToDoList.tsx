@@ -4,7 +4,7 @@ import TaskCards from "./TaskCards.tsx";
 
 const ToDoList = () => {
 
-    const [tasks, setTasks] = useState<string[]>([]);
+    const [tasks, setTasks] = useState<string[]>(["Take a shower", "Brush Teeth", "Washing hair"]);
     const [newTask, setNewTask] = useState<string>("");
 
 

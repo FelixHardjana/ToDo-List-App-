@@ -1,5 +1,4 @@
 
-import { useState } from "react";
 
 type TaskProps = {
     tasks: string[],
@@ -17,6 +16,8 @@ const TaskCards = ({tasks, handleDeleteTask, className }: TaskProps) => {
 
                         <button>Task Completed</button>
                         <button onClick={() => handleDeleteTask(index)}>X</button>
+                        {/* buttons needs to stay in TaskCards.tsx */}
+                        {/* Map method need to go to ToDoLiSt.tsx */}
                     </li>
                 ))}
             </ol>
